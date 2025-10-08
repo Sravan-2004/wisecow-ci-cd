@@ -40,7 +40,7 @@ jobs:
       # 6. Deploy to Kubernetes
       - name: Deploy to Kubernetes
         env:
-          KUBECONFIG: ${{ secrets.KUBECONFIG_FILE }}
+          KUBECONFIG: /home/ubuntu/.kube/config
         run: |
           kubectl apply -f k8s/deployment.yaml
           kubectl apply -f k8s/service.yaml
