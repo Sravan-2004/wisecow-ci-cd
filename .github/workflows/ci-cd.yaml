@@ -44,4 +44,7 @@ jobs:
         run: |
           kubectl apply -f k8s/deployment.yaml
           kubectl apply -f k8s/service.yaml
+          kubectl apply -f k8s/clusterissuer-selfsigned.yaml
+          kubectl apply -f k8s/certificate.yaml
+          kubectl apply -f k8s/ingress.yaml
 
